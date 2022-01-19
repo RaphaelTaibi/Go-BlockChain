@@ -28,7 +28,32 @@ func createBlock(data string, prevHash []byte) *Block {
 	return block
 }
 
+func (chain *Blockchain) AddBlock(data string) {
+
+	prevBlock := chain.blocks[len(chain.blocks)-1]
+	new := createBlock(data, prevBlock.Hash)
+	chain.blocks = append(chain.blocks, new)
+}
+
+func Genesis() *Block {
+	return createBlock("Genesis", []byte{})
+}
+
+func InitBlockchain() *Blockchain {
+	return &Blockchain{[]*Block{Genesis()}}
+}
+
 func main() {
-	TxHash := sha256.Sum256("1801221157254550")
-	fmt.Println(TxHash)
+
+	chain := InitBlockchain()
+
+	chain.AddBlock("--FirtsBlock after genesis--")
+	chain.AddBlock("--Second Block after genesis--")
+	chain.AddBlock("Third Block after genesis--")
+
+	for _, block := range chain.blocks {
+		fmt.Printf("Previous hash: %x\n", block.PrevHash)
+		fmt.Printf("data: %s\n", block.Data)
+		fmt.Printf("hash: %x\n\n", block.Hash)
+	}
 }
