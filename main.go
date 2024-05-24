@@ -2,7 +2,7 @@ package main
 
 import (
 	"os"
-	"github.com/RaphaelTaibi/Go-BlockChain/tree/main/cli"
+	"github.com/RaphaelTaibi/Go-BlockChain/cli"
 )
 
 func main() {

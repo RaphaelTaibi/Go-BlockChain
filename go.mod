@@ -1,4 +1,4 @@
-module github.com/nheingit/learnGo
+module github.com/RaphaelTaibi/Go-BlockChain
 
 go 1.16
 
