@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strconv"
 
-	"github.com/nheingit/learnGo/blockchain"
-	"github.com/nheingit/learnGo/blockchain/wallet"
+	"github.com/RaphaelTaibi/Go-BlockChain/tree/main/blockchain"
+	"github.com/RaphaelTaibi/Go-BlockChain/tree/main/blockchain/wallet"
 
 )
 

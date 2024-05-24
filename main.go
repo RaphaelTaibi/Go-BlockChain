@@ -2,8 +2,7 @@ package main
 
 import (
 	"os"
-
-	"github.com/nheingit/learnGo/cli"
+	"github.com/RaphaelTaibi/Go-BlockChain/tree/main/cli"
 )
 
 func main() {
